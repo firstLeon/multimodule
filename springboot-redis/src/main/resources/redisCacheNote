@@ -1,0 +1,22 @@
+redis缓存的配置：
+Package org.springframework.data.redis.cache是提供用于Redis缓存抽象的Redis实现的软件包。
+一、接口类型（org.springframework.data.redis.cache包的接口）
+   1.org.springframework.data.redis.cache.CacheKeyPrefix:
+         CacheKeyPrefix是一个接口，它提供了一个用于创建自定义前缀的挂钩，该自定义前缀在Redis中存储的实际密钥之前。
+
+   2.org.springframework.data.redis.cache.RedisCacheWriter
+         RedisCacheWriter提供对用于缓存的Redis命令（SET，SETNX，GET，EXPIRE等）的低级访问。
+
+
+二、类
+   1.org.springframework.data.redis.cache.RedisCache：
+         使用Redis作为基础存储的缓存实现。
+
+   2.org.springframework.data.redis.cache.RedisCacheConfiguration：
+         不可变的RedisCacheConfiguration有助于自定义RedisCache行为，例如缓存null值，缓存键前缀和二进制序列化。（主要用于自定义RedisCache行为）
+
+   3.org.springframework.data.redis.cache.RedisCacheManager：
+          RedisCacheManager是由Redis缓存支持的CacheManager。
+
+   4.org.springframework.data.redis.cache.RedisCacheManager.RedisCacheManagerBuilder：
+          RedisCacheManagerBuilder是org.springframework.data.redis.cache.RedisCacheManager的一个静态内部类，用于创建RedisCacheManager的配置器。

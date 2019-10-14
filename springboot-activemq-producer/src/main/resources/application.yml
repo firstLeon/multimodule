@@ -1,0 +1,12 @@
+server:
+  port: 9090
+
+spring:
+  activemq:
+    broker-url: tcp://192.168.28.129:61616
+    #结束之前等待的时间
+    close-timeout: 15s
+    user: admin
+    password: admin
+#自定义队列名
+myqueue: activeQueue
